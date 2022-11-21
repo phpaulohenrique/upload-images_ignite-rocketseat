@@ -32,11 +32,8 @@ export function CardList({ cards }: CardsProps): JSX.Element {
       onOpen();
     }
 
-
-  // console.log(cards)
   return (
     <>
-      {/* TODO CARD GRID */}
 
       <div>
         <SimpleGrid columns={3} spacing="40px" pb={8}>
@@ -48,7 +45,7 @@ export function CardList({ cards }: CardsProps): JSX.Element {
         </SimpleGrid>
       </div>
 
-      {/* TODO MODALVIEWIMAGE */}
+
       {isOpen && (
         <ModalViewImage
           isOpen={isOpen}

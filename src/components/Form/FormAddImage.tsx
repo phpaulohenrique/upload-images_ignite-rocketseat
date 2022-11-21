@@ -24,7 +24,7 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
 
   const toast = useToast();
 
-  const acceptedFormatsRegex = /(?:([^:/?#]+):)?(?:([^/?#]*))?([^?#](?:jpeg|gif|png))(?:\?([^#]*))?(?:#(.*))?/g;
+  // const acceptedFormatsRegex = /(?:([^:/?#]+):)?(?:([^/?#]*))?([^?#](?:jpeg|gif|png))(?:\?([^#]*))?(?:#(.*))?/g;
 
   const formValidations = {
     image: {
@@ -61,7 +61,7 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
   const queryClient = useQueryClient();
 
   const mutation = useMutation(async(image: NewImageData) => {
-    const response =  await api.post('/api/images', {
+    await api.post('/api/images', {
       ...image,
       url: imageUrl,
     })

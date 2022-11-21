@@ -65,6 +65,7 @@ export default function Home(): JSX.Element {
   );
 
 
+  console.log(data)
 
   const formattedData = useMemo(() => {
 
